@@ -14,7 +14,11 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  neovim-gtk = pkgs.callPackage ./pkgs/neovim-gtk { };
+  neovim-gtk = with pkgs.lib; let
+    min-cargo-vendor = "0.1.23";
+    packageOlder = p: v: versionOlder (getVersion p) v;
+    cargoVendorTooOld = cargo-vendor: packageOlder cargo-vendor min-cargo-vendor;
+  in pkgs.callPackage ./pkgs/neovim-gtk { oldCargoVendor = cargoVendorTooOld pkgs.cargo-vendor; };
   # example-package = pkgs.callPackage ./pkgs/example-package { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
