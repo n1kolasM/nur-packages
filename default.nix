@@ -19,6 +19,7 @@
     packageOlder = p: v: versionOlder (getVersion p) v;
     cargoVendorTooOld = cargo-vendor: packageOlder cargo-vendor min-cargo-vendor;
   in pkgs.callPackage ./pkgs/neovim-gtk { oldCargoVendor = cargoVendorTooOld pkgs.cargo-vendor; };
+  avr8-burn-omat = pkgs.callPackage ./pkgs/avr8-burn-omat { };
   # example-package = pkgs.callPackage ./pkgs/example-package { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
