@@ -4,4 +4,5 @@ rec {
   cognitive-complexity = callPackage ./cognitive-complexity {};
   stevedore = callPackage ./stevedore {};
   bandit = callPackage ./bandit { inherit stevedore; };
+  darglint = callPackage ./darglint {};
 }
