@@ -26,4 +26,5 @@ in rec {
       propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [ toml ];
     });
   };
+  flake8-logging-format = callPackage ./flake8-logging-format {};
 }
