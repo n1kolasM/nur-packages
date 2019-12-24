@@ -34,4 +34,5 @@ in rec {
   flake8-string-format = callPackage ./flake8-string-format {};
   mando = callPackage ./mando {};
   pep8-naming = callPackage ./pep8-naming {};
+  radon = callPackage ./radon { inherit mando; };
 }
