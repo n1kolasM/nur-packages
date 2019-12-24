@@ -17,4 +17,5 @@ in rec {
   flake8-builtins = callPackage ./flake8-builtins {};
   flake8-coding = callPackage ./flake8-coding {};
   flake8-commas = callPackage ./flake8-commas {};
+  flake8-comprehensions = callPackage ./flake8-comprehensions {};
 }
