@@ -1,4 +1,4 @@
-{ callPackage, poetry }:
+{ isort, toml, callPackage, poetry }:
 
 let
   isPackageBroken = package: builtins.hasAttr "broken" package.meta && package.meta.broken;
@@ -21,4 +21,9 @@ in rec {
   flake8-docstrings = callPackage ./flake8-docstrings {};
   flake8-eradicate = callPackage ./flake8-eradicate {};
   flake8-executable = callPackage ./flake8-executable {};
+  flake8-isort = callPackage ./flake8-isort {
+    isort = isort.overrideAttrs (oldAttrs: rec {
+      propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [ toml ];
+    });
+  };
 }
