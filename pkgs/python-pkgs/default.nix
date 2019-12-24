@@ -27,4 +27,5 @@ in rec {
     });
   };
   flake8-logging-format = callPackage ./flake8-logging-format {};
+  flake8-pep3101 = callPackage ./flake8-pep3101 {};
 }
