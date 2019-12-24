@@ -30,4 +30,5 @@ in rec {
   flake8-pep3101 = callPackage ./flake8-pep3101 {};
   flake8-print = callPackage ./flake8-print {};
   flake8-quotes = callPackage ./flake8-quotes {};
+  flake8-rst-docstrings = callPackage ./flake8-rst-docstrings {};
 }
