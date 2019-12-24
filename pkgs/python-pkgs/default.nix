@@ -19,4 +19,5 @@ in rec {
   flake8-commas = callPackage ./flake8-commas {};
   flake8-comprehensions = callPackage ./flake8-comprehensions {};
   flake8-docstrings = callPackage ./flake8-docstrings {};
+  flake8-eradicate = callPackage ./flake8-eradicate {};
 }
