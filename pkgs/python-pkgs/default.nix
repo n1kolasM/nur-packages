@@ -13,4 +13,5 @@ in rec {
     callPackage ./flake8-broken-line {}
   else
     callPackage ./flake8-broken-line/without-poetry.nix {};
+  flake8-bugbear = callPackage ./flake8-bugbear {};
 }
