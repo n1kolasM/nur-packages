@@ -15,4 +15,5 @@ in rec {
     callPackage ./flake8-broken-line/without-poetry.nix {};
   flake8-bugbear = callPackage ./flake8-bugbear {};
   flake8-builtins = callPackage ./flake8-builtins {};
+  flake8-coding = callPackage ./flake8-coding {};
 }
