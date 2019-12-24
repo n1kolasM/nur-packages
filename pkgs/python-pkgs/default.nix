@@ -33,4 +33,5 @@ in rec {
   flake8-rst-docstrings = callPackage ./flake8-rst-docstrings {};
   flake8-string-format = callPackage ./flake8-string-format {};
   mando = callPackage ./mando {};
+  pep8-naming = callPackage ./pep8-naming {};
 }
