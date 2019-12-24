@@ -35,4 +35,13 @@ in rec {
   mando = callPackage ./mando {};
   pep8-naming = callPackage ./pep8-naming {};
   radon = callPackage ./radon { inherit mando; };
+  wemake-python-styleguide = callPackage ./wemake-python-styleguide {
+    inherit cognitive-complexity flake8-builtins;
+    inherit flake8-commas flake8-quotes flake8-comprehensions;
+    inherit flake8-docstrings flake8-string-format flake8-coding;
+    inherit flake8-bugbear flake8-pep3101 flake8-isort flake8-eradicate;
+    inherit flake8-bandit flake8-logging-format flake8-broken-line;
+    inherit flake8-print flake8-annotations-complexity flake8-rst-docstrings;
+    inherit flake8-executable pep8-naming radon darglint;
+  };
 }
