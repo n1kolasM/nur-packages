@@ -44,4 +44,8 @@ in rec {
     inherit flake8-print flake8-annotations-complexity flake8-rst-docstrings;
     inherit flake8-executable pep8-naming radon darglint;
   };
+  returns = if !isPackageBroken poetry then
+    callPackage ./returns {}
+  else
+    callPackage ./returns/without-poetry.nix {};
 }
