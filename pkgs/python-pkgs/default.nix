@@ -48,4 +48,5 @@ in rec {
     callPackage ./returns {}
   else
     callPackage ./returns/without-poetry.nix {};
+  tox = callPackage ./tox {};
 }
