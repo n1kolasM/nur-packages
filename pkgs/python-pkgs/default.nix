@@ -40,6 +40,7 @@ let
     else
       callPackage ./returns/without-poetry.nix {};
     tox = callPackage ./tox {};
+    sentry-sdk = callPackage ./sentry-sdk {};
   });
 in
   makeScope upstreamNewScope packages
