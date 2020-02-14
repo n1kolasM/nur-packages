@@ -1,5 +1,4 @@
-{ lib, newScope, pythonPackages
-, poetry }:
+{ lib, newScope, pythonPackages }:
 with lib;
 let
   upstreamNewScope = scope: newScope (pythonPackages // scope);
@@ -11,10 +10,7 @@ let
     darglint = callPackage ./darglint {};
     flake8-annotations-complexity = callPackage ./flake8-annotations-complexity {};
     flake8-bandit = callPackage ./flake8-bandit {};
-    flake8-broken-line = if !isPackageBroken poetry then
-      callPackage ./flake8-broken-line {}
-    else
-      callPackage ./flake8-broken-line/without-poetry.nix {};
+    flake8-broken-line = callPackage ./flake8-broken-line/without-poetry.nix {};
     flake8-bugbear = callPackage ./flake8-bugbear {};
     flake8-builtins = callPackage ./flake8-builtins {};
     flake8-coding = callPackage ./flake8-coding {};
@@ -35,10 +31,7 @@ let
     pep8-naming = callPackage ./pep8-naming {};
     radon = callPackage ./radon {};
     wemake-python-styleguide = callPackage ./wemake-python-styleguide {};
-    returns = if !isPackageBroken poetry then
-      callPackage ./returns {}
-    else
-      callPackage ./returns/without-poetry.nix {};
+    returns = callPackage ./returns/without-poetry.nix {};
     tox = callPackage ./tox {};
     sentry-sdk = callPackage ./sentry-sdk {};
   });
