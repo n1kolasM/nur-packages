@@ -12,7 +12,7 @@ buildPythonPackage rec {
     flake8
     setuptools
   ] ++ stdenv.lib.optionals (pythonOlder "3.8") [
-    importlib metadata
+    importlib-metadata
   ];
   # Tests require poetry build from github distribution
   doCheck = false;
