@@ -10,10 +10,7 @@ rustPlatform.buildRustPackage rec {
     sha256 = "0idn0j41h3bvyhcq2k0ywwnbr9rg9ci0knphbf7h7p5fd4zrfb30";
   };
 
-  cargoSha256 = if lib.hasPrefix "20.03" lib.version then
-    "0js581whb6bg65bby2zyssxxrxjcgk925mgv1ds5djdj3bin42ig"
-  else
-    "1gsnr2j68kfx2w2r2pv11rln0qlmgq05van2f3h0f7jk5c7rs4yb";
+  cargoSha256 = "sha256-YitqVNLAXyvtSGEdeBGdW4ZDTMHCJ37clff7L3vcFEs=";
 
   nativeBuildInputs = [
     wrapGAppsHook

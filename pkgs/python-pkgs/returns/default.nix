@@ -18,6 +18,7 @@ buildPythonPackage rec {
     description = "Make your functions return something meaningful, typed, and safe!";
     homepage = https://returns.readthedocs.io;
     license = licenses.bsd2;
+    broken = true;
     maintainers = with lib.maintainers; [ ];
   };
 }
