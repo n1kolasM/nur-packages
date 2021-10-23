@@ -1,4 +1,4 @@
-{ stdenv, cmake, fetchFromGitHub, boost, zlib, minizip }:
+{ stdenv, lib, cmake, fetchFromGitHub, boost, zlib, minizip }:
 stdenv.mkDerivation {
   pname = "axmldec";
   version = "1.2.0";
@@ -15,4 +15,10 @@ stdenv.mkDerivation {
   ];
   nativeBuildInputs = [ cmake ];
   buildInputs = [ boost zlib minizip ];
+
+  meta = with lib; {
+    description = "Android Binary XML Decoder";
+    homepage = https://github.com/ytsutano/axmldec;
+    license = licenses.isc;
+  };
 }
