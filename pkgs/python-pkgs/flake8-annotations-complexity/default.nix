@@ -1,4 +1,4 @@
-{ stdenv, buildPythonPackage, fetchFromGitHub, pytest }:
+{ lib, buildPythonPackage, fetchFromGitHub, pytest }:
 buildPythonPackage rec {
   pname = "flake8-annotations-complexity";
   version = "0.0.6";
@@ -15,11 +15,10 @@ buildPythonPackage rec {
     ${pytest}/bin/pytest
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A flake8 extension that checks for type annotations complexity";
     homepage = https://github.com/best-doctor/flake8-annotations-complexity;
     license = licenses.mit;
-    maintainers = with lib.maintainers; [ ];
   };
 }
 
