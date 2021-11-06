@@ -15,7 +15,7 @@ jobs:
         nurRepo:
           - n1kolasM
         cachixName:
-          - n1kolasm
+          - nikolasm
         nixPath:
           - nixpkgs=channel:nixpkgs-unstable
           - nixpkgs=channel:nixos-unstable
